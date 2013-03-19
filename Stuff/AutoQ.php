@@ -30,7 +30,7 @@ $_SESSION['valid_user'] = Guest;
         }
 	//alert(timeSpent);
 	var siteid = 12;
-        var url = "http://54.225.224.84/LESI/SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
+        var url = "SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
 	var userid = "<?php echo $_SESSION['valid_user']; ?>";
 	var url2 = url+"&userid="+userid;
 	var url3 = url2+"&timeout="+endTime;
@@ -44,7 +44,7 @@ $_SESSION['valid_user'] = Guest;
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://54.225.224.84/LESI/Home.html">
+		<a href="Home.html">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" style="width: 3150px">
 		<p align="center"><font size="7">Auto Insurance</font></td>
@@ -52,7 +52,7 @@ $_SESSION['valid_user'] = Guest;
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://54.225.224.84/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <body>
