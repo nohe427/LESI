@@ -24,6 +24,7 @@ else {
 
 
 $id = $_REQUEST['id'];
+//Possibly change to "SELECT * FROM CLAIM WHERE CLAIM_NUM = ".$id." to carry over the variable?
 $image = mysql_query("SELECT * FROM CLAIM WHERE CLAIM_NUM = $id");
 $imageArray=mysql_fetch_assoc($image);
 $image=$imageArray['PHOTO'];
