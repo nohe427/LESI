@@ -15,7 +15,8 @@ if (!$login)
 	//echo "Checking login";
 	if($username && $password)
 	{
-			$connect = mysql_connect('localhost', 'apnohe', 'o79gmtype') or die("Could not connect");
+			//$connect = mysql_connect('localhost', 'apnohe', 'o79gmtype') or die("Could not connect");
+Include "connection.php";
 			mysql_select_db("PROJECT2_NOHE") or die("Could not find the Database");
 			
 			$query = mysql_query("Select * From USERS WHERE USERID = '$username'");
@@ -81,7 +82,7 @@ $userid = $_SESSION['valid_user'];
         }
 	//alert(timeSpent);
 	var siteid = 1;
-        var url = "http://54.225.224.84/LESI/SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
+        var url = "SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
 	var userid = "<?php echo $userid; ?>";
 	var url2 = url+"&userid="+userid;
 	var url3 = url2+"&timeout="+endTime;
@@ -109,20 +110,20 @@ $userid = $_SESSION['valid_user'];
 		You are currently logged in&nbsp; as:<br>
 		<br> <? echo $_SESSION['valid_user'] ?>
 		<br>
-		<a href="http://54.225.224.84/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <?
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/Maintenance.php">Maint';
+echo	'<a href="Maintenance.php">Maint';
 echo	'enace</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/Reports.php">Reports</a></font></li>';
+echo	'<a href="Reports.php">Reports</a></font></li>';
 echo'</ul>';
 //echo '<p>'.$_SESSION['level'].'user</p>';
 }
@@ -140,7 +141,7 @@ elseif ($_SESSION['level'] == 2)
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://54.225.224.84/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <?
@@ -149,7 +150,7 @@ echo '<p align="center">&nbsp;</p>';
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/AllPolicies.php">All Policies</a></font></li>
+	<a href="AllPolicies.php">All Policies</a></font></li>
 </ul>
 <?
 echo'<p>&nbsp;</p>';
@@ -157,31 +158,31 @@ echo'<p>&nbsp;</p>';
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/AllAgents.php">All Agents</a></font></li>
+	<a href="AllAgents.php">All Agents</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/AllCustomers.php">All Customers</a></font></li>
+	<a href="AllCustomers.php">All Customers</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/LocationInformation.php">All Locations</a></font></li>
+	<a href="LocationInformation.php">All Locations</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/PoliciesByCustomer.php">Policy By Customer</a></font></li>
+	<a href="PoliciesByCustomer.php">Policy By Customer</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://54.225.224.84/LESI/claimsReports.php">Claims by Policy Number</a></font></li>
+	<a href="claimsReports.php">Claims by Policy Number</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <?
@@ -201,26 +202,26 @@ elseif ($_SESSION['level'] == 4)
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://54.225.224.84/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <?
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/FileAClaim.php">File a ';
+echo	'<a href="FileAClaim.php">File a ';
 echo	'claim</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/GetAQuote.php">Sign ';
+echo	'<a href="GetAQuote.php">Sign ';
 echo	'Up!</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/BillPay.php">Pay a Bill</a></font></li>';
+echo	'<a href="BillPay.php">Pay a Bill</a></font></li>';
 echo'</ul>';
 //echo '<p>'.$_SESSION['level'].'user</p>';
 }
@@ -230,8 +231,9 @@ echo'</ul>';
 echo '<table border="1" width="983" height="120">';
 echo	'<tr>';
 echo		'<td height="120" width="86" style="border-style: solid; border-width: 1px">';
-echo		'<a href="http://54.225.224.84/LESI/Home.html">';
-echo		'<img border="0" src="file://Nas/geogstud/an96387/COSC%20386/LESI/Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>';
+echo		'<a href="Home.html">';
+//This needs to be updated? Maybe?
+echo		'<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>';
 echo		'<td height="120" width="881">';
 echo		'<p align="center"><font size="7">Unsuccessful Login</font></td>';
 echo	'</tr>';
@@ -239,13 +241,13 @@ echo '</table>';
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/Login.php">Click here ';
+echo	'<a href="Login.php">Click here ';
 echo	'to return to the login screen please</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://54.225.224.84/LESI/Register.php">Click here ';
+echo	'<a href="Register.php">Click here ';
 echo	'to register!</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
