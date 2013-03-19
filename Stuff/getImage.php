@@ -9,7 +9,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 //if ($connection = @mysql_connect ('localhost', 'apnohe', 'o79gmtype')){
 	//print '<p>Successfully connected to MySQL.</p>';
 	 
-}
+//}
 else {
 	die('<p>Could not connect to MySQL because: <b>' .mysql_error() .
 	'</b></p>');
