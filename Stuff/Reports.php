@@ -29,7 +29,7 @@ session_start();
         }
 	//alert(timeSpent);
 	var siteid = 10;
-        var url = "http://acadweb1.salisbury.edu/~apnohe/LESI/SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
+        var url = "SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
 	var userid = "<?php echo $_SESSION['valid_user']; ?>";
 	var url2 = url+"&userid="+userid;
 	var url3 = url2+"&timeout="+endTime;
@@ -43,7 +43,7 @@ session_start();
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">
+		<a href="Home2.php">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" style="width: 3150px">
 		<p align="center"><font size="7">Reports</font></td>
@@ -51,7 +51,7 @@ session_start();
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <p align="center">&nbsp;</p>
@@ -59,85 +59,85 @@ session_start();
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Security.php">Security</a></font></li>
+	<a href="Security.php">Security</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/AllPolicies.php">All Policies</a></font></li>
+	<a href="AllPolicies.php">All Policies</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/AllAgents.php">All Agents</a></font></li>
+	<a href="AllAgents.php">All Agents</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/AllCustomers.php">All Customers</a></font></li>
+	<a href="AllCustomers.php">All Customers</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/SalesByAgent.php">Sales By Agent</a></font></li>
+	<a href="SalesByAgent.php">Sales By Agent</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/SalesByBranch.php">Sales By Branch</a></font></li>
+	<a href="SalesByBranch.php">Sales By Branch</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/SalesByPolicy.php">Sales By Policy</a></font></li>
+	<a href="SalesByPolicy.php">Sales By Policy</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/SalaryInformation.php">Salary Information</a></font></li>
+	<a href="SalaryInformation.php">Salary Information</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/LocationInformation.php">All Locations</a></font></li>
+	<a href="LocationInformation.php">All Locations</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/PoliciesByCustomer.php">Policy By Customer</a></font></li>
+	<a href="PoliciesByCustomer.php">Policy By Customer</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/CustomerByAgent.php">Customer By Agent</a></font></li>
+	<a href="CustomerByAgent.php">Customer By Agent</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/BillsByTime.php">Bills By Time</a></font></li>
+	<a href="BillsByTime.php">Bills By Time</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Commissions.php">Comissions by Agent</a></font></li>
+	<a href="Commissions.php">Comissions by Agent</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <ul>
 	<li>
 	<p align="left"><font size="5">
-	<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/claimsReports.php">Claims by Policy Number</a></font></li>
+	<a href="claimsReports.php">Claims by Policy Number</a></font></li>
 </ul>
 <p align="left">&nbsp;</p>
 <body>
