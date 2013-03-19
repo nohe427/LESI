@@ -6,7 +6,7 @@ ini_set('display_errors',1);
 error_reporting(E_ALL & ~E_NOTICE);
 //Attempt to Connect
 
-if ($connection = @mysql_connect ('localhost', 'apnohe', 'o79gmtype')){
+//if ($connection = @mysql_connect ('localhost', 'apnohe', 'o79gmtype')){
 	//print '<p>Successfully connected to MySQL.</p>';
 	 
 }
@@ -14,6 +14,7 @@ else {
 	die('<p>Could not connect to MySQL because: <b>' .mysql_error() .
 	'</b></p>');
 }
+Include "connection.php";
 if (@mysql_select_db("PROJECT2_NOHE", $connection)){
 	//print '<p>The flagg alexamara database has been selected.</p>';
 }
