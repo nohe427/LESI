@@ -8,8 +8,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 //Attempt to Connect
 
-$connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
-
+//$connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
+Include "connection.php";
 @mysql_select_db("PROJECT2_NOHE", $connection);
 
 		$query = "SELECT * FROM USERS, CUSTOMER WHERE CUSTOMER.USERID = '".$_SESSION['valid_user']."'";
@@ -46,7 +46,7 @@ $connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
         }
 	//alert(timeSpent);
 	var siteid = 20;
-        var url = "http://acadweb1.salisbury.edu/~apnohe/LESI/SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
+        var url = "SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
 	var userid = "<?php echo $_SESSION['valid_user']; ?>";
 	var url2 = url+"&userid="+userid;
 	var url3 = url2+"&timeout="+endTime;
@@ -60,7 +60,7 @@ $connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">
+		<a href="Home2.php">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" style="width: 3150px">
 		<p align="center"><font size="7">Auto Insurance</font></td>
@@ -68,7 +68,7 @@ $connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table><br><br><br><br>
 <?
@@ -107,13 +107,13 @@ $_SESSION['age'] = $age;
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Confirm.php">Click to ';
+echo	'<a href="Confirm.php">Click to ';
 echo	'confirm and sign up or </a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">click to cancel and return to the home page.</a></font></li>';
+echo	'<a href="Home2.php">click to cancel and return to the home page.</a></font></li>';
 echo'</ul>';
 //echo '<p>'.$_SESSION['level'].'user</p>';
 
