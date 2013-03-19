@@ -10,10 +10,10 @@ error_reporting(E_ALL & ~E_NOTICE);
 	//print '<p>Successfully connected to MySQL.</p>';
 	 
 //}
-else {
-	die('<p>Could not connect to MySQL because: <b>' .mysql_error() .
-	'</b></p>');
-}
+//else {
+//	die('<p>Could not connect to MySQL because: <b>' //.mysql_error() .
+//	'</b></p>');
+//}
 Include "connection.php";
 if (@mysql_select_db("PROJECT2_NOHE", $connection)){
 	//print '<p>The flagg alexamara database has been selected.</p>';
