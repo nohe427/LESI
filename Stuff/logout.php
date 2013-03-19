@@ -27,7 +27,7 @@
 echo '<table border="1" width="983" height="120">';
 echo	'<tr>';
 echo		'<td height="120" width="86" style="border-style: solid; border-width: 1px">';
-echo		'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home.html">';
+echo		'<a href="Home.html">';
 echo		'<img border="0" src="file://Nas/geogstud/an96387/COSC%20386/LESI/Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>';
 echo		'<td height="120" width="881">';
 echo		'<p align="center"><font size="7">Log Out</font></td>';
