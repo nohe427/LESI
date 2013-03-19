@@ -9,7 +9,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 //Attempt to Connect
 
 //$connection = @mysql_connect('localhost', 'apnohe', 'o79gmtype');
-
+Include "connection.php";
 @mysql_select_db("PROJECT2_NOHE", $connection);
 
 $USER = $_SESSION['valid_user'];
