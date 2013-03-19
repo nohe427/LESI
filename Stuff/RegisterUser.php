@@ -16,7 +16,7 @@ session_start();
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Register.php">
+		<a href="Register.php">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" width="881">
 		<p align="center"><font size="7">Registration</font></td>
@@ -37,7 +37,8 @@ if (isset($_POST['userid']) && isset($_POST['password']) && isset($_POST['passwo
   $phone_num = $_POST['phone_num'];
   $dob = $_POST['dob'];
 
-  $db_conn = new mysqli('localhost', 'apnohe', 'o79gmtype', 'PROJECT2_NOHE');
+ //$db_conn = new mysqli('localhost', 'apnohe', 'o79gmtype', 'PROJECT2_NOHE');
+Include "connection.php";
 	//echo $AL;
   if (mysqli_connect_errno()) {
    echo 'Connection to database failed:'.mysqli_connect_error();
@@ -59,7 +60,7 @@ if (isset($_POST['userid']) && isset($_POST['password']) && isset($_POST['passwo
 	print '</script>';
 		echo'<ul>';
 		echo	'<li><font size="5">';
-		echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Register.php">Please try to register again with a different username</a></font></li>';
+		echo	'<a href="Register.php">Please try to register again with a different username</a></font></li>';
 		echo'</ul>';
   }
   else
@@ -76,7 +77,7 @@ if (isset($_POST['userid']) && isset($_POST['password']) && isset($_POST['passwo
 		$_SESSION['valid_user'] = $userid;
 		echo'<ul>';
 		echo	'<li><font size="5">';
-		echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">You have successfully created a login.  Please continue to the home page.</a></font></li>';
+		echo	'<a href="Home2.php">You have successfully created a login.  Please continue to the home page.</a></font></li>';
 		echo'</ul>';
   	}
   	else
@@ -86,7 +87,7 @@ if (isset($_POST['userid']) && isset($_POST['password']) && isset($_POST['passwo
 		print '</script>';
 		echo'<ul>';
 		echo	'<li><font size="5">';
-		echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Register.php">Please try to register again with matching passwords</a></font></li>';
+		echo	'<a href="Register.php">Please try to register again with matching passwords</a></font></li>';
 		echo'</ul>';
 	}
   }
@@ -95,7 +96,7 @@ if (isset($_POST['userid']) && isset($_POST['password']) && isset($_POST['passwo
  {
 		echo'<ul>';
 		echo	'<li><font size="5">';
-		echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Register.php">Please try to register again with all the fields filled in</a></font></li>';
+		echo	'<a href="Register.php">Please try to register again with all the fields filled in</a></font></li>';
 		echo'</ul>';
  }
  ?>
