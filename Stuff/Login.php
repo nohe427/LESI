@@ -7,7 +7,8 @@ if (isset($_POST['userid']) && isset($_POST['password']))
   $userid = $_POST['userid'];
   $password = $_POST['password'];
 
-  $db_conn = new mysqli('localhost', 'apnohe', 'o79gmtype', 'PROJECT2_NOHE');
+  //$db_conn = new mysqli('localhost', 'apnohe', 'o79gmtype', 'PROJECT2_NOHE');
+Include "connection.php";
 
   if (mysqli_connect_errno()) {
    echo 'Connection to database failed:'.mysqli_connect_error();
@@ -59,7 +60,7 @@ else
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home.html">
+		<a href="Home.html">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" width="881">
 		<p align="center"><font size="7">Login</font></td>
