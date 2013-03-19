@@ -30,7 +30,7 @@
         }
 	//alert(timeSpent);
 	var siteid = 2;
-        var url = "http://acadweb1.salisbury.edu/~apnohe/LESI/SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
+        var url = "SESSIONS.php?timein="+startTime;        //Send the time on the page to a php script of your choosing.
 	var userid = "<?php echo $_SESSION['valid_user']; ?>";
 	var url2 = url+"&userid="+userid;
 	var url3 = url2+"&timeout="+endTime;
@@ -51,7 +51,7 @@
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">
+		<a href="Home2.php">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" style="width: 3150px">
 		<p align="center"><font size="7">Maintenance</font></td>
@@ -59,40 +59,40 @@
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <?
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Location.php">Loc';
+echo	'<a href="Maintenance_Location.php">Loc';
 echo	'ation</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Agent.php">Agent</a></font></li>';
+echo	'<a href="Maintenance_Agent.php">Agent</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Discounts.php">Discount</a></font></li>';
+echo	'<a href="Maintenance_Discounts.php">Discount</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Customer.php">Customer</a></font></li>';
+echo	'<a href="Maintenance_Customer.php">Customer</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Policy.php">Policy</a></font></li>';
+echo	'<a href="Maintenance_Policy.php">Policy</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Maintenance_Users.php">Users</a></font></li>';
+echo	'<a href="Maintenance_Users.php">Users</a></font></li>';
 echo'</ul>';
 echo'<p>&nbsp;</p>';
 //echo '<p>'.$_SESSION['level'].'user</p>';
@@ -105,7 +105,7 @@ echo'<p>&nbsp;</p>';
 <table border="1" width="983" height="120">
 	<tr>
 		<td height="120" width="86" style="border-style: solid; border-width: 1px">
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">
+		<a href="Home2.php">
 		<img border="0" src="Lower%20Shore%20Insurance%20Company%20Logo.png" width="128" height="128"></a></td>
 		<td height="120" style="width: 3150px">
 		<p align="center"><font size="7">Unauthorized Access</font></td>
@@ -113,14 +113,14 @@ echo'<p>&nbsp;</p>';
 		You are currently logged in&nbsp; as:<br>
 		<br><? echo $_SESSION['valid_user']; ?>
 		<br>
-		<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/logout.php">Logout</a></td>
+		<a href="logout.php">Logout</a></td>
 	</tr>
 </table>
 <?
 echo '<p align="center">&nbsp;</p>';
 echo'<ul>';
 echo	'<li><font size="5">';
-echo	'<a href="http://acadweb1.salisbury.edu/~apnohe/LESI/Home2.php">Click here ';
+echo	'<a href="Home2.php">Click here ';
 echo	'to return to the home screen.</a></font></li>';
 echo'</ul>';
 
